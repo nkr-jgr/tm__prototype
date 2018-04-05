@@ -1,0 +1,216 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+		<!-- BASICS -->
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Tutemark: Marking every Tutorial of the web</title>
+        <meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="icon" href="{% static "img/icon.png" %}" />
+		<link rel="stylesheet" type="text/css" href="{% static "css/isotope.css" %}" media="screen" />	
+		<link rel="stylesheet" href="{% static "js/fancybox/jquery.fancybox.css" %}" type="text/css" media="screen" />
+		<link rel="stylesheet" href="{% static "css/bootstrap.css" %}" />
+		<link rel="stylesheet" href="{% static "css/bootstrap-theme.css" %}" />
+        <link rel="stylesheet" href="{% static "css/style.css" %}" />
+		<!-- skin -->
+		<link rel="stylesheet" href="{% static "skin/default.css" %}" />
+
+		<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css' />
+
+		<script type="text/javascript" src="{% static "feedback_me/jquery-1.10.2.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "feedback_me/feedback_me.js" %}"></script>
+		
+		<link rel="stylesheet" type="text/css" href="{% static "feedback_me/feedback_me.css" %}" />
+
+		<script type="text/javascript">
+		$(document).ready(function () {
+			    //set up some minimal options for the feedback_me plugin
+			    fm_options = {
+					show_form : false,
+					position : "right-bottom",
+			        iframe_url : "/feedback_form/"
+			    };
+	
+			    //init feedback_me plugin
+			    fm.init(fm_options);
+	
+			    SyntaxHighlighter.all();
+			});
+
+		</script>
+
+
+    </head>
+	 
+    <body>
+		<section id="header" class="appear"></section>
+		<div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(112, 185, 176, 0.8);" data-300="line-height:60px; height:60px; background-color: rgba(112, 185, 176, 1);">
+			 <div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="fa fa-bars color-white"></span>
+					</button>
+					<h1><a class="navbar-brand" href="{% static "index.html" %}" data-0="line-height:90px;" data-300="line-height:50px;">			<img src="{% static "logo2.png" %}" height="50px" >
+					</a></h1>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
+						<li class=""><a href="{% static "about.html" %}">About</a></li>
+						<li><a href="{% static "blogs.html" %}">Blog</a></li>
+					</ul>
+				</div><!--/.navbar-collapse -->
+			</div>
+		</div>
+
+		<section class="featured">
+			<div class="featured_copy">
+			<div class="container"> 
+				<div class="row mar-bot40">
+					<div class="c">
+						
+						<div class="align-center">
+							<i class="fa fa-flask fa-5x mar-bot20"></i>
+							<h2 class="slogan">why <br><img src="{% static "logo2.png" %}" height="40px"></span></h2>
+						</div>
+							<div class="points"><center>
+								<ul>
+									<li>a lot of tutorials on the web for one thing to learn</li><br>
+									<li>sometimes learners gets confused which one to follow, actually all the times</li><br>
+									<li>this whole information is mixed up with other non-learning things</li>		
+								</ul>
+							</center></div>	
+						
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+		
+		<!-- services -->
+		<section id="section-services" class="section pad-bot30 bg-white">
+		<div class="container"> 
+			<h3><center><img src="logo.png" height="30px"> provides</center></h3><br><br>
+			<div class="row mar-bot40">
+				<div class="col-lg-4" >
+					<div class="align-center">
+						<img src="./img/icons/globe.png" height="100px"></img>
+						<!--i class="fa fa-code fa-5x mar-bot20"></i-->
+						<h4 class="text-bold"><br>Everything at one place</h4>
+						<p class="line">tutemark will let you see everything you can learn from the internet websites
+						</p>
+					</div>
+				</div>
+					
+				<div class="col-lg-4" >
+					<div class="align-center">
+						<!--i class="fa fa-terminal fa-5x mar-bot20"></i-->
+						<img src="./img/icons/ranking.png" height="100px"></img>
+						<h4 class="text-bold"><br>And that to also ranked</h4>
+						<p class="line">And as we have a problem with which one to follow, tutemark ranks it all at different criteria for you, now you gets what exactly you want.
+						</p>
+					</div>
+				</div>
+			
+				<div class="col-lg-4" >
+					<div class="align-center">
+						<!--i class="fa fa-bolt fa-5x mar-bot20"></i-->
+						<img src="./img/icons/users.png" height="100px"></img>
+						<h4 class="text-bold"><br>Ranked by you, the Users</h4>
+						<p class="line">tutorials will be ranked using different many criteria, tutemark provide the users the opportunity to rank with one click as well.
+						</p>
+					</div>
+				</div>
+			
+			</div>	
+
+		</div>
+		</section>
+
+		<!-- quote -->
+		<section id="parallax2" class="section parallax" data-stellar-background-ratio="0.5">	
+            <div class="align-center pad-top20 pad-bot20">
+                <blockquote class="bigquote color-white" style="color: white">99% of the Web information is useless to 99% of Web users.</blockquote>
+				<p class="color-white" style="color: white">--Mentioned in the 'Data Mining' Book by Jiawei Han & Micheline Kamber</p>
+            </div>
+		</section>
+
+		<!-- subscription -->
+		<section id="section-contact" class="section appear clearfix">
+			<div class="container">
+				
+				<div class="row mar-bot40">
+					<div class="col-md-offset-3 col-md-6">
+						<div class="section-header">
+							<h2 class="section-heading animated" data-animation="bounceInUp"><img src="logo.png" height="40px" > is Coming Within <span style="background-color: #C33; color: white">180</span> days.</h2>
+							<p style="font-family: 'Titillium Web', sans-serif; color: #00003D;">We invite all learners and tutors out there to join the revolution, tutemark that provides learners -a platform to find the best material and tutors -one more platform to show up</p>
+							<p class="headtext" style="font-family: 'Titillium Web', sans-serif;
+	font-size: 120%;">Register yourself and be in the first ones who will be getting access, get updated about the product as well.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="cform" id="contact-form">
+						{% if if_submitted %}
+							<div id="sendmessage">
+								 Your name is successfully added to our early users mailing list.
+							</div>
+						{% endif %}
+							
+							
+							<form action="contact/" method="post" role="form" class="contactForm">{% csrf_token %}
+							  <div class="form-group">
+								
+								<input type="text" name="name" class="form-control" id="name" placeholder="Your Name or Organization/Website/blog Name" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
+								<div class="validation"></div>
+							  </div>
+							  <div class="form-group">
+								
+								<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+								<div class="validation"></div>
+							  </div>
+							  
+							  <button type="submit" class="btn btn-theme pull-left">Subscribe</button>
+							</form>
+
+						</div>
+					</div>
+					<!-- ./span12 -->
+				</div>
+				
+			</div>
+		</section>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12" style="position: relative;  bottom: 0px; color: white; background-color:rgba(0, 168, 151, 1); width: 100%; font-family: 'Titillium Web', sans-serif; font-size: 20px" >
+					<p><center>tutemark.com</center></p>
+				</div>
+			</div>		
+		</div>	
+	</footer>
+	<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>	
+
+	<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+	<script src="js/jquery.isotope.min.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<script src="js/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="js/skrollr.min.js"></script>		
+	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script src="js/jquery.localscroll-1.2.7-min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="js/jquery.appear.js"></script>
+	<script src="js/validate.js"></script>
+    <script src="js/main.js"></script>
+	</body>
+</html>

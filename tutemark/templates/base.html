@@ -1,0 +1,77 @@
+{% load static%}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+		<!-- BASICS -->
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="icon" href="{% static "img/icon.png" %}" />
+
+		<link rel="stylesheet" type="text/css" href="{% static "css/isotope.css" %}" media="screen" />	
+		<link rel="stylesheet" href="{% static "js/fancybox/jquery.fancybox.css" %}" type="text/css" media="screen" />
+		<link rel="stylesheet" href="{% static "css/bootstrap.css" %}" />
+		<link rel="stylesheet" href="{% static "css/bootstrap-theme.css" %}" />
+        <link rel="stylesheet" href="{% static "css/style.css" %}" />
+		<link rel="stylesheet" href="{% static "skin/default.css" %}" />
+		<link rel="stylesheet" type="text/css" href="{% static "feedback_me/feedback_me.css" %}" />
+
+		<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Glegoo' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,400italic' rel='stylesheet' type='text/css'>
+
+		<script type="text/javascript" src="{% static "feedback_me/jquery-1.10.2.min.js" %}"></script>
+		<script type="text/javascript" src="{% static "feedback_me/feedback_me.js" %}"></script>
+		
+		<script type="text/javascript">
+		$(document).ready(function () {
+
+			    fm_options = {
+					show_form : false,
+					position : "right-bottom",
+			        iframe_url : "feed_form/"
+			    };
+
+			    fm.init(fm_options);
+			    SyntaxHighlighter.all();
+			});
+		</script>
+
+    </head>
+    
+    <body>
+    
+    	{% block content %}{% endblock %}
+    
+		<footer>
+			<div class="container" style="position: relative;  bottom: 0px; width: 100%; color: white; background-color:rgb(112, 185, 176); width: 100%; font-family: 'Titillium Web', sans-serif; font-size: 18px; height: 28px">
+				<p style="text-align: center;">tutemark.com</p>	
+			</div>
+		</footer>
+
+		<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+		<script src="{% static "js/modernizr-2.6.2-respond-1.1.0.min.js" %}"></script>
+		<script src="{% static "js/jquery.js" %}"></script>
+		<script src="{% static "js/jquery.easing.1.3.js" %}"></script>
+		<script src="{% static "js/bootstrap.min.js" %}"></script>
+		<script src="{% static "js/jquery.isotope.min.jsjs/jquery.js" %}"></script>
+		<script src="{% static "js/jquery.nicescroll.min.js" %}"></script>
+		<script src="{% static "js/fancybox/jquery.fancybox.pack.js" %}"></script>
+		<script src="{% static "js/skrollr.min.js" %}"></script>		
+		<script src="{% static "js/jquery.scrollTo-1.4.3.1-min.js" %}"></script>
+		<script src="{% static "js/jquery.localscroll-1.2.7-min.js" %}"></script>
+		<script src="{% static "js/stellar.js" %}"></script>
+		<script src="{% static "js/jquery.appear.js" %}"></script>
+		<script src="{% static "js/validate.js" %}"></script>
+		<script src="{% static "js/main.js" %}"></script>
+    </body>
+</html>

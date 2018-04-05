@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About - Tutemark {% endblock %}
+
+{% block content %}
+<section id="header" class="appear"></section>
+<div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(112, 185, 176, 0.8);" data-300="line-height:60px; height:60px; background-color: rgba(112, 185, 176, 1);">
+	 <div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="fa fa-bars color-white"></span>
+			</button>
+			<h1><a class="navbar-brand" href="/comingsoon/" data-0="line-height:90px;" data-300="line-height:50px;">			<img src="{% static "img/logo2.png" %}" height="50px" >
+			</a></h1>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
+				<li class=""><a href="/about/">About</a></li>
+				<li><a href="blogs.html">Blog</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<section class="featured" style="width: 100%">
+	<div class="container" style="width: 100%"> 
+		<div class="row mar-bot40">
+			<div class="col-md-6 col-md-offset-3">
+				<h4 class="title"><center>About us</center></h4>
+				<p class="lines">We are a group of young, enthusiastic and hustler people from IIT's and other top institutions, aim to build products for learners and teachers in order to improve learning/teaching platform with proper technology. Tutemark is the first product of our line, on that we have been working and looking forward to launch before May, 2015.</p>
+				<p class="lines">We keep blogging about our work and get our followers updated about the product and further ideas. <a class="link" href="#section-contact">Subscribe</a> and get all updates right in your inbox.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- subscription -->
+<section id="section-contact" class="section appear clearfix">
+	<div class="container">
+		<div class="row mar-bot40">
+			<div class="col-md-offset-3 col-md-6">
+				<div class="section-header">
+					<h2 class="section-heading animated" data-animation="bounceInUp"><img src="{% static "img/logo.png" %}" height="40px" > is Coming Within <span style="background-color: #C33; color: white">{{ days_left }}</span> days.</h2>
+					<p style="font-family: 'Titillium Web', sans-serif; color: #00003D;">We invite all learners and tutors out there to join the revolution, tutemark that provides learners -a platform to find the best material and tutors -one more platform to show up</p>
+					<p class="headtext" style="font-family: 'Titillium Web', sans-serif;
+font-size: 18px;">Register yourself and be in the first ones who will be getting access, get updated about the product as well.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="cform" id="contact-form">
+					<div id="sendmessage">
+						 Your name is successfully added to our early users mailing list.
+					</div>
+					<form action="/contact/" method="post" role="form" class="contactForm">{% csrf_token %}
+							  <div class="form-group">
+								
+								<input type="text" name="name" class="form-control" id="name" placeholder="Your Name or Organization/Website/blog Name" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
+								<div class="validation"></div>
+							  </div>
+							  <div class="form-group">
+								
+								<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+								<div class="validation"></div>
+							  </div>
+							  
+							  <button class="btn btn-theme pull-left" name="commit" onclick="validate_activity();" type="submit">Subscribe</button>
+							</form>
+					<!--form action="contact/contact.php" method="post" role="form" class="contactForm">
+					  <div class="form-group">
+						<input type="text" name="name" class="form-control" id="name" placeholder="Your Name or Organization/Website/blog Name" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
+						<div class="validation"></div>
+					  </div>
+					  <div class="form-group">
+						<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+						<div class="validation"></div>
+					  </div>
+					  <button type="submit" class="btn btn-theme pull-left">Subscribe</button>
+					</form-->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
